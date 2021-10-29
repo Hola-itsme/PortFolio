@@ -1,0 +1,393 @@
+/* ********* NAVBAR ******** */
+.nav-items li{
+    padding-right: 1rem;
+}
+
+.nav-items li a{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--font-color);
+}
+
+.nav-items li a:hover{
+    border-bottom: 1px solid var(--font-color);
+}
+
+.navigation-menu{
+    height: 60px;
+}
+
+.navigation-menu .logo{
+    padding-left: 0.7rem;
+    font-size: 1.3rem;
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.theme-changer select{
+    display: inline-block;
+    height: 30px;
+    width: 150px;
+    padding: 2px 15px;
+    outline: none;
+    color: var(--pure);
+    background: var(--secondary);
+    border-radius: 4px;
+}
+
+.Hamburger{
+    display: none;
+    margin-top: 8px;
+}
+
+.mobile .Hamburger{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    cursor: pointer;
+} 
+
+.mobile .Hamburger span{
+    background: var(--pure);
+    width: 25px;
+    height: 2px;
+    margin-bottom: 7px;
+}
+
+.mobile .Hamburger span{
+    transform-origin: left;
+    transition: all .3s ease-in;
+}
+
+.Hamburger, .logo, .theme-changer{
+    z-index: 999;
+}
+
+.mobile ul.nav-items{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    padding-top: 80px;
+    position: fixed;
+    background: var(--primary);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in;
+}
+
+.mobile ul.nav-items.open{
+    opacity: 0.9;
+    pointer-events: auto;
+}
+
+.mobile ul.nav-items li{
+    margin-left: 0;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/* ************** MAIN ************* */
+.main .container{
+    height: 600px;
+    border-top: 5px solid var(--pure);
+    border-bottom: 5px solid var(--pure);
+    border-radius: 10px;
+}
+
+.main-photo img{
+    margin: 4rem 5rem;
+    height: 350px;
+    border: 8px solid var(--pure);
+    border-radius: 50%;
+    animation: SlideInFromRight 1s ease-in;
+}
+
+.main-text{
+    margin: 0 4rem;
+    flex-direction: column;
+    justify-content: center;
+    animation: SlideInFromLeft 1s ease-in;
+}
+
+.main-text h2{
+    font-size: 4rem;
+}
+
+.main-text .typing{
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+.typing{
+    position: relative;
+}
+
+.typing:after{
+    content : '';
+    position: absolute;
+    width: 1px;
+    height: 35px;
+    border-right: 3px solid var(--font-color);
+    animation: blink 1s infinite ease-in-out;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+/* ************** FOOTER **************** */
+.footer .container{
+    height: 50px;
+    justify-content: center;
+    
+}
+
+/* **************** ABOUT ***************** */
+.about .container{
+    height: 1050px;
+    border-top: 5px solid var(--pure);
+    border-bottom: 5px solid var(--pure);
+    border-radius: 10px;
+    animation: Appear 1s ease-in;
+}
+
+.about h1{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px ;
+}
+
+.about .my-info{
+    margin: 30px;
+}
+
+.about .my-info .card{
+    margin-bottom: 0.7rem;
+}
+
+.about .my-info .card li{
+    list-style-type: disc;
+}
+
+.my-info p{
+    line-height: 2;
+    font-size: 1.3rem;
+}
+
+.about .my-education, .my-skills{
+    margin: 60px 5rem;
+}
+
+.about .my-education p{
+    line-height: 1.5;
+}
+
+.about .my-skills h3{
+    margin-bottom: 0.5rem;
+    font-weight: bolder;
+}
+
+.about .my-skills li{
+    list-style-type: disc;
+}
+
+/* ********************** CERTIFICATES ******************* */
+
+.Certificates .container{
+    border-top: 5px solid var(--pure);
+    border-bottom: 5px solid var(--pure);
+    border-radius: 10px;
+    animation: Appear 1s ease-in;
+}
+
+.Certificates h1{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.my-certificates .certificates span{
+    margin-right: 0.8rem;
+}
+
+.my-certificates{
+    margin: 60px 5rem;
+}
+
+/* *************************** PROJECTS ************************ */
+.projects .container{
+    border-top: 5px solid var(--pure);
+    border-bottom: 5px solid var(--pure);
+    border-radius: 10px;
+    height: 650px;
+    animation: Appear 1s ease-in;
+}
+
+.projects h1{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.my-projects{
+    margin-top: 2rem;
+}
+
+.projects .card{
+    height: 480px;
+    width: 400px;
+    margin-right: 0.6rem;
+}
+
+.my-projects li{
+    list-style-type: disc;
+}
+
+.my-projects p{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.my-projects h2{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-bottom: 0.7rem;
+}
+
+.my-projects .btn{
+    margin-top: 1rem ;
+}
+
+/* ************************* CONTACT ************************** */
+.contact .container{
+    border-top: 5px solid var(--pure);
+    border-bottom: 5px solid var(--pure);
+    border-radius: 10px;
+    flex-direction: column;
+    height: 750px;
+    animation: Appear 1s ease-in;
+}
+
+.contact .container h1{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+
+.container .social a{
+    margin-right: 4rem;
+    font-size: 1rem;
+}
+
+.social i{
+    margin-right: 0.5rem;
+}
+
+.social{
+    margin-left: 3rem;
+}
+
+.container .form{
+    margin-top: 3rem;
+}
+
+.form{
+    width: 600px;
+    height: 400px;
+}
+
+.form-control{
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+.form-control input, textarea{
+    width: 100%;
+    padding: 8px;
+    display: block;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control i{
+    position: absolute;
+    right: 8px;
+    top: 40px;
+    visibility: hidden;
+}
+
+.form-control small{
+    color: #e74c3c;
+    position: absolute;
+    bottom: -12;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle{
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control.error small{
+    visibility: visible;
+}
+
+@keyframes SlideInFromLeft{
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes SlideInFromRight{
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes Appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
